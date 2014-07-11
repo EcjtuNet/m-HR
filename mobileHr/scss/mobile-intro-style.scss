@@ -1,0 +1,177 @@
+/*           CSS Reset           */
+/*
+ * http://meyerweb.com/eric/tools/css/reset/    v2.0 | 20110126
+ * License: none (public domain)
+ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summarytime, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+}
+a:hover, a:active {
+	text-decoration: underline;
+}
+
+
+/*      Sass       */
+
+//----- color -----
+
+$rixin-red: #f26c46;      // header
+$button-gray: #534d4d;    // button
+$tag-light: #c3b099;      // tag
+$tag-dark: #a0835f;
+$footer-bgcolor: #282828; // footer
+
+//----- font -----
+
+$container-font: normal 16px/32px Microsoft Yahei, Arial, sans-serif;
+$container-color: #534d4d;
+
+$footer-font: normal 14px/24px Helvetica, Arial, sans-serif;
+
+//----- layout -----
+
+$border-height: 8px;
+
+$container-padding: 50px;
+
+
+//----- Container -----
+
+#container {
+	width: 100%;
+	padding-top: $container-padding + $border-height;
+
+	#banner {
+		width: 360px;
+		height: 342px;
+		margin: 0 auto;
+		padding: 36px 0;
+		line-height: 342px;
+		background: url(../images/banner.png) center center no-repeat;
+
+		#intro-1 {
+			display: none;
+			width: 320px;
+			height: 200px;
+			margin: 48px auto;
+			background: url(../images/prd-intro-1.png) center center no-repeat;
+		}
+		#prd-intro-main, #prd-intro-job, #tech-intro-main, #tech-intro-job, #news-intro-main, #news-intro-job, #manage-intro-main, #manage-intro-job {
+			display: none;
+			padding: 12px;
+			color: $container-color;
+			font: $container-font;
+		}
+		#manage-intro-job {
+			display: block;
+		}
+	}
+}
+
+header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding-bottom: $border-height;
+
+	h1 {
+		background: $rixin-red;
+		height: $container-padding;
+		a#logo {
+			display: inline-block;
+			width: 163px + 24px;
+			height: $container-padding;
+			background: url(../images/logo.png) center center no-repeat;
+		}
+	}
+	#border {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: $border-height;
+		background: url(../images/header-border.png) bottom left repeat-x;
+	}
+}
+
+
+footer {
+	width: 100%;
+	padding: 24px 0;
+	background: $footer-bgcolor;
+
+	p {
+		margin: 0 0 14px 0;
+		text-align: center;
+		letter-spacing: .05em;
+		font: $footer-font;
+		color: #fff;
+	}
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	right: 48px;
+
+	#tag {
+		width: 36px;
+		height: 50px;
+		margin: 0 auto;
+		background: url(../images/tag.png) no-repeat;
+	}
+	a#about {
+		display: inline-block;
+		width: 64px;
+		height: 64px;
+		margin-top: 36px;
+		background: url(../images/us.png) no-repeat;
+	}
+	a#about:before {
+		content: "";
+		position: absolute;
+		left: 31px;
+		top: 42px;
+		display: inline-block;
+		width: 2px;
+		height: 44px;
+		background: $tag-dark;
+	}
+	a#about:active {
+		margin-top: 48px;
+	}
+	a#about:active:before {
+		height: 44px + 12px;
+	}
+}

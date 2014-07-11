@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" />
+	<title>日新 招新::报名表</title>
+	<link rel="shortcut icon" href="./images/icon.png" />
+	<link rel="stylesheet" href="./css/mobile-edit-style.css" />
+</head>
+<body>
+	<div id="container">
+		<h2>报名表</h2>
+		<div id="form">
+			<form action="http://hr.ecjtu.net/index.php/register/check" method="post" accept-charset="UTF-8">
+				<p><span>姓名-</span><input type="text"></p>
+				<p><span>性别-</span><input type="radio" name="sex" value="male" /> 男
+				<input type="radio" name="sex" value="female" /> 女</p>
+				<p><span>手机-</span><input type="text"></p>
+				<p><span>QQ&nbsp;-&nbsp;</span><input type="text"></p>
+				<p><span>学院-</span>
+					<select name="campus" id="campus">
+						<option value="" selected="selected">土木建筑学院</option>
+						<option value="">电气与电子工程学院</option>
+						<option value="">机电工程学院</option>
+						<option value="">经济管理学院</option>
+						<option value="">外国语学院</option>
+						<option value="">信息工程学院</option>
+						<option value="">基础科学学院</option>
+						<option value="">人文社会科学学院</option>
+						<option value="">国际学院</option>
+						<option value="">软件学院</option>
+						<option value="">体育学院</option>
+						<option value="">轨道交通学院</option>
+						<option value="">艺术学院</option>
+						<option value="">国防生学院</option>
+					</select>
+				</p>
+				<p><span>专业-</span>
+					<select name="major" id="major">
+						<option value=""></option>
+						<option value=""></option>
+						<option value=""></option>
+						<option value=""></option>
+					</select>
+				</p>
+				<p><span class="select">选择中心-</span>
+					<select name="center" id="center">
+						<option value="tech" selected="selected">技术研发中心</option>
+						<option value="news">新闻出版中心</option>
+						<option value="prd">产品运营中心</option>
+						<option value="manage">行政管理中心</option>
+					</select>
+				</p>
+				<p><span class="select">部门方向-</span>
+					<select name="direction" id="direction">
+						<option value=""></option>
+						<option value=""></option>
+						<option value=""></option>
+						<option value=""></option>
+					</select>
+				</p>
+				<p><span id="personal">个人简介-</span>
+					<textarea name="" id="" cols="30" rows="10"></textarea>
+				</p>
+				<h3>
+					<button type="submit">提交报名</button>
+					<a href="./mobile-hr.html">返回首页</a>
+				</h3>
+			</form>
+		</div>
+	</div>
+	<header>
+		<h1><a id="logo" href=""></a></h1>
+		<div id="border"></div>
+	</header>
+	<footer>
+		<p>华东交通大学团委、学工处 [ 版权所有 交大日新 ] 赣ICP备05003322号 日新工作室 维护</p>
+		<p>Copyright 2001-2014 By [ecjtu.net].All Rights Reserved</p>
+	</footer>
+	<nav>
+		<div id="tag"></div>
+		<a href="" id="about"></a>
+	</nav>
+</body>
+</html>

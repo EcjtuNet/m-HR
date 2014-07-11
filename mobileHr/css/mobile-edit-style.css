@@ -1,0 +1,170 @@
+/*           CSS Reset           */
+/*
+ * http://meyerweb.com/eric/tools/css/reset/    v2.0 | 20110126
+ * License: none (public domain)
+ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summarytime, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a:link, a:visited {
+  text-decoration: none; }
+
+a:hover, a:active {
+  text-decoration: underline; }
+
+/*      Sass       */
+#container {
+  width: 100%;
+  padding-top: 58px;
+  text-align: center; }
+  #container h2 {
+    text-align: center;
+    font: normal 36px/48px Microsoft Yahei, Arial, sans-serif;
+    color: #534d4d; }
+  #container #form {
+    display: inline-block; }
+    #container #form p {
+      position: relative;
+      text-align: left;
+      font: normal 16px/28px Microsoft Yahei, Arial, sans-serif; }
+      #container #form p span.select {
+        display: block; }
+      #container #form p span#personal {
+        float: left; }
+    #container #form input, #container #form select, #container #form textarea {
+      font: normal 16px/28px Microsoft Yahei, Arial, sans-serif; }
+    #container #form input, #container #form select {
+      border: none;
+      background: url(../images/input.png) no-repeat;
+      clip: rect(0px 120px 0px 0px); }
+    #container #form input[type=text] {
+      position: relative;
+      left: 28px;
+      width: 170px;
+      height: 34px;
+      margin: 12px;
+      padding: 0 12px; }
+    #container #form input[type=radio] {
+      margin-left: 42px; }
+    #container #form select {
+      position: relative;
+      left: 28px;
+      width: 194px;
+      height: 34px;
+      margin: 12px;
+      padding: 0 12px; }
+    #container #form #center, #container #form #direction {
+      position: relative;
+      left: 75px; }
+    #container #form textarea {
+      width: 194px;
+      height: 97px;
+      margin: 12px;
+      border: 2px solid #313131; }
+    #container #form h3 {
+      text-align: center; }
+      #container #form h3 button, #container #form h3 a {
+        width: 110px;
+        height: 36px;
+        margin: 12px;
+        font: normal 16px/28px Microsoft Yahei, Arial, sans-serif;
+        background: url(../images/clickme.png) center center no-repeat;
+        line-height: 36px;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        cursor: pointer; }
+      #container #form h3 button:active, #container #form h3 a:active {
+        background: url(../images/clickme-active.png) center center no-repeat;
+        color: #534d4d; }
+      #container #form h3 button {
+        border: none; }
+      #container #form h3 a {
+        display: inline-block; }
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-bottom: 8px; }
+  header h1 {
+    background: #f26c46;
+    height: 50px; }
+    header h1 a#logo {
+      display: inline-block;
+      width: 187px;
+      height: 50px;
+      background: url(../images/logo.png) center center no-repeat; }
+  header #border {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 8px;
+    background: url(../images/header-border.png) bottom left repeat-x; }
+
+footer {
+  width: 100%;
+  padding: 24px 0;
+  background: #282828; }
+  footer p {
+    margin: 0 0 14px 0;
+    text-align: center;
+    letter-spacing: .05em;
+    font: normal 14px/24px Helvetica, Arial, sans-serif;
+    color: #fff; }
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 48px; }
+  nav #tag {
+    width: 36px;
+    height: 50px;
+    margin: 0 auto;
+    background: url(../images/tag.png) no-repeat; }
+  nav a#about {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin-top: 36px;
+    background: url(../images/us.png) no-repeat; }
+  nav a#about:before {
+    content: "";
+    position: absolute;
+    left: 31px;
+    top: 42px;
+    display: inline-block;
+    width: 2px;
+    height: 44px;
+    background: #a0835f; }
+  nav a#about:active {
+    margin-top: 48px; }
+  nav a#about:active:before {
+    height: 56px; }
