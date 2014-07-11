@@ -1,49 +1,12 @@
-/*           CSS Reset           */
 /*
- * http://meyerweb.com/eric/tools/css/reset/    v2.0 | 20110126
- * License: none (public domain)
+ * EcjtuNet Mobile HR
+ *
+ * @author    Lancelot at EcjtuNet
+ * @version   0.2
+ * @last-time 2014.7.11
+ *
  */
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summarytime, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-a:link, a:visited {
-	text-decoration: none;
-}
-a:hover, a:active {
-	text-decoration: underline;
-}
-
-
-/*      Sass       */
 
 //----- color -----
 
@@ -65,6 +28,24 @@ $footer-font: normal 14px/24px Helvetica, Arial, sans-serif;
 $border-height: 8px;
 
 $container-padding: 50px;
+
+
+/* path
+ ------------------------------------ */
+
+$logo-imagepath: "../images/logo.png";                     // header
+$header-border-imagepath: "../images/header-border.png";
+
+$tech-imagepath: "../images/tech.png";                     // container
+$news-imagepath: "../images/news.png";
+$prd-imagepath: "../images/prd.png";
+$manage-imagepath: "../images/manage.png";
+
+$click-imagepath: "../images/clickme.png";
+$click-act-imagepath: "../images/clickme-active.png";
+
+$tag-imagepath: "../images/tag.png";                       // nav
+$us-imagepath: "../images/us.png";
 
 
 //----- Container -----
@@ -113,7 +94,7 @@ header {
 			display: inline-block;
 			width: 163px + 24px;
 			height: $container-padding;
-			background: url(../images/logo.png) center center no-repeat;
+			background: url($logo-imagepath) center center no-repeat;
 		}
 	}
 	#border {
@@ -121,7 +102,7 @@ header {
 		bottom: 0;
 		width: 100%;
 		height: $border-height;
-		background: url(../images/header-border.png) bottom left repeat-x;
+		background: url($header-border-imagepath) bottom left repeat-x;
 	}
 }
 
@@ -149,14 +130,14 @@ nav {
 		width: 36px;
 		height: 50px;
 		margin: 0 auto;
-		background: url(../images/tag.png) no-repeat;
+		background: url($tag-imagepath) no-repeat;
 	}
 	a#about {
 		display: inline-block;
 		width: 64px;
 		height: 64px;
 		margin-top: 36px;
-		background: url(../images/us.png) no-repeat;
+		background: url($us-imagepath) no-repeat;
 	}
 	a#about:before {
 		content: "";
