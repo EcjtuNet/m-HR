@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="./css/reset.css" />
 	<link rel="stylesheet" href="./css/mobile-hr-style.css" />
 	<script src="./scripts/jquery.js"></script>
+	<script src="./scripts/mobile-hr-script.js"></script>
 </head>
 <body>
 	<!-- 主体内容 -->
@@ -24,7 +25,7 @@
 				<li><a id="prd" href=""></a></li>
 				<li><a id="manage" href=""></a></li>
 			</ul>
-			<h2><a href="javascript:void;">立即报名</a></h2>
+			<h2><a id="register" href="#">立即报名</a></h2>
 		</div>
 		<!-- 报名表 -->
 		<div id="edit">
@@ -83,7 +84,7 @@
 					</p>
 					<h3>
 						<button type="submit">提交报名</button>
-						<a href="javascript:void;">返回首页</a>
+						<a id="back2index" href="javascript:void;">返回首页</a>
 					</h3>
 				</form>
 			</div>
@@ -151,12 +152,13 @@
 					3、做事细致认真，有较强的责任感；<br />
 					4、对于所选方向有一定的认知，并有充足的热情去对待。
 				</p>
+				<button id="next"></button>
 			</div>
 		</div>
 	</div>
 	<!-- LOGO -->
 	<header>
-		<h1><a id="logo" href=""></a></h1>
+		<h1><a id="logo" href="mobile-hr.html"></a></h1>
 		<div id="border"></div>
 	</header>
 	<!-- 版权及其他 -->
@@ -167,7 +169,7 @@
 	<!-- 关于我们 -->
 	<nav>
 		<div id="tag"></div>
-		<a href="javascript:void;" id="about"></a>
+		<a href="mobile-hr.html" id="about"></a>
 	</nav>
 </body>
 </html>

@@ -3,7 +3,7 @@
  *
  * @author    Lancelot at EcjtuNet
  * @version   0.2
- * @last-time 2014.7.11
+ * @last-time 2014.7.15
  *
  */
 
@@ -102,7 +102,7 @@ $header-border-imagepath: "../images/header-border.png";
 			text-align: center;
 			margin: 0 auto;
 			padding: 24px 0 36px;
-			a {
+			a#register {
 				display: inline-block;
 				width: 110px;
 				height: 36px;
@@ -112,7 +112,7 @@ $header-border-imagepath: "../images/header-border.png";
 				font: normal 18px/36px Microsoft Yahei, Arial, sans-serif;
 				color: #fff;
 			}
-			a:active {
+			a#register:active {
 				background: url($imagepath) -110px 0px no-repeat;
 				color: $container-color;
 			}
@@ -161,6 +161,24 @@ $header-border-imagepath: "../images/header-border.png";
 				margin-left: 42px;
 			}
 			select {
+				-webkit-appearance: button;
+			    -moz-appearance: button;
+			    -webkit-user-select: none;
+			    -moz-user-select: none;
+			    -webkit-padding-end: 20px;
+			    -moz-padding-end: 20px;
+			    -webkit-padding-start: 2px;
+			    -moz-padding-start: 2px;
+			    background: url($imagepath) 0 -319px no-repeat;
+			    border: none;
+			    color: $container-color;
+			    font-size: inherit;
+			    margin: 0;
+			    overflow: hidden;
+			    padding-top: 2px;
+			    padding-bottom: 2px;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
 				position: relative;
 				left: 28px;
 				width: 194px;
@@ -181,7 +199,7 @@ $header-border-imagepath: "../images/header-border.png";
 			h3 {
 				text-align: center;
 
-				button, a {
+				button, a#back2index {
 					width: 110px;
 					height: 36px;
 					margin: 12px;
@@ -200,7 +218,7 @@ $header-border-imagepath: "../images/header-border.png";
 				button {
 					border: none;
 				}
-				a {
+				a#back2index {
 					display: inline-block;
 				}
 			}
@@ -209,10 +227,10 @@ $header-border-imagepath: "../images/header-border.png";
 	/* ----- Introduction ----- */
 	#intro {
 		#banner {
+			position: relative;
 			width: 360px;
 			height: 342px;
-			margin: 0 auto;
-			padding: 36px 0;
+			margin: 36px auto;
 			line-height: 342px;
 			background: url(../images/banner.png) no-repeat;
 
@@ -229,8 +247,18 @@ $header-border-imagepath: "../images/header-border.png";
 				color: $container-color;
 				font: $container-font;
 			}
-			#manage-intro-job {
-				display: block;
+			// #manage-intro-job {
+			// 	display: block;
+			// }
+			#next {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 54px;
+				height: 49px;
+				border: none;
+				border-radius: 10px;
+				background: transparent;
 			}
 		}
 	}
@@ -250,7 +278,7 @@ header {
 			display: inline-block;
 			width: 163px + 24px;
 			height: 27px;
-			margin: ($container-padding - 27px)/2 0;
+			margin: ($container-padding - 27px)/2;
 			background: url($imagepath) 0 -100px no-repeat;
 		}
 	}
