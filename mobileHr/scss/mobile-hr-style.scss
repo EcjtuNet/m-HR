@@ -8,43 +8,11 @@
  */
 
 
-/* color
- ------------------------------------- */
-
-$rixin-red: #f26c46;      			// header
-$button-gray: #534d4d;    			// button
-$tag-light: #c3b099;      			// tag
-$tag-dark: #a0835f;
-$container-border-gray: #313131;	// container
-$footer-bgcolor: #282828; 			// footer
-
-/* font
- ------------------------------------ */
-
-$container-h2-font: normal 36px/48px Microsoft Yahei, Arial, sans-serif;
-$container-font: normal 16px/28px Microsoft Yahei, Arial, sans-serif;
-$container-span-font: normal 16px /58px Microsoft Yahei, Arial, sans-serif;
-$container-color: #534d4d;
-
-$footer-font: normal 14px/24px Helvetica, Arial, sans-serif;
-
-/* layout
- ------------------------------------ */
-
-$border-height: 8px;
-
-$container-padding: 50px;
-
-/* path
- ------------------------------------ */
-
-$imagepath: "../images/sprit.png";
-$header-border-imagepath: "../images/header-border.png";
 
 /* file loading
  ------------------------------------ */
-@import "reset";
-
+@import "reset";  // CSS Reset File
+@import "variable";  // Scss Variables
 
 
 
@@ -56,6 +24,7 @@ $header-border-imagepath: "../images/header-border.png";
 	padding-top: $container-padding + $border-height;
 	/* ----- HR-index ----- */
 	#hr {
+		display: none;
 		p {
 			width: 261px;
 			margin: 16px auto;
@@ -120,6 +89,7 @@ $header-border-imagepath: "../images/header-border.png";
 	}
 	/* ----- Edit ----- */
 	#edit {
+		display: none;
 		text-align: center;
 
 		h2 {
@@ -199,7 +169,7 @@ $header-border-imagepath: "../images/header-border.png";
 			h3 {
 				text-align: center;
 
-				button, a#back2index {
+				input[type=submit], a#back2index {
 					width: 110px;
 					height: 36px;
 					margin: 12px;
@@ -211,11 +181,11 @@ $header-border-imagepath: "../images/header-border.png";
 					text-align: center;
 					cursor: pointer;
 				}
-				button:active, a:active {
+				input[type=submit]:active, a:active, a#back2index:active {
 					background: url($imagepath) -110px 0 no-repeat;
 					color: $container-color;
 				}
-				button {
+				input[type=submit] {
 					border: none;
 				}
 				a#back2index {
@@ -226,6 +196,7 @@ $header-border-imagepath: "../images/header-border.png";
 	}
 	/* ----- Introduction ----- */
 	#intro {
+		display: none;
 		#banner {
 			position: relative;
 			width: 360px;
@@ -233,23 +204,20 @@ $header-border-imagepath: "../images/header-border.png";
 			margin: 36px auto;
 			line-height: 342px;
 			background: url(../images/banner.png) no-repeat;
-
-			#intro-1 {
+			.pic {
 				display: none;
 				width: 320px;
 				height: 200px;
-				margin: 48px auto;
+				margin: 0 auto;
+				padding: 0 48px;
 				background: url(../images/prd-intro-1.png) no-repeat;
 			}
-			#prd-intro-main, #prd-intro-job, #tech-intro-main, #tech-intro-job, #news-intro-main, #news-intro-job, #manage-intro-main, #manage-intro-job {
+			.prd, .tech, .news, .manage, .main, .job {
 				display: none;
-				padding: 12px;
+				padding: 0 6px;
 				color: $container-color;
 				font: $container-font;
 			}
-			// #manage-intro-job {
-			// 	display: block;
-			// }
 			#next {
 				position: absolute;
 				bottom: 0;
@@ -259,6 +227,7 @@ $header-border-imagepath: "../images/header-border.png";
 				border: none;
 				border-radius: 10px;
 				background: transparent;
+				cursor: pointer;
 			}
 		}
 	}
